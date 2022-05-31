@@ -4,7 +4,7 @@ library(ggpubr)
 library(latex2exp)
 
 # Importing data
-data <- read.csv('C:\\Users\\Owner\\Desktop\\Stage_2022\\BH_M-sigma_compilation\\Data\\potentialerror.csv')
+data <- read.csv('C:\\Users\\Owner\\Desktop\\Stage_2022\\BH_M-sigma_compilation\\Data\\BHcompilation_updated.csv')
 
 # Creating data for fits
 data_fitting <- data.frame(data)
