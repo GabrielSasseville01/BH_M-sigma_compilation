@@ -54,6 +54,16 @@ m, b, r, p, se = linregress(linreg_data[0], linreg_data[1])
 x_2022 = np.linspace(0, 3, num=100)
 y_2022 = x_2022*m + b
 
+gamma0 = 0.83
+gamma1 = 0.56
+beta0 = 4.43
+beta1 = -4.20
+
+#yhurdle = np.log((gamma0 + gamma1*x_2022)/(1+np.exp(-beta0 - beta1*x_2022)))
+yhurdle = (gamma0 + gamma1*x_2022)
+plt.plot(x_2022, yhurdle, color='red')
+
+
 # plotting linear regressions
 plt.plot(x_2016, y_2016, color='black', linestyle='dotted', linewidth=1, label='Regression 2016')
 plt.plot(x_2022, y_2022, color='black', linestyle='solid', linewidth=1.5, label='Regression 2022')
