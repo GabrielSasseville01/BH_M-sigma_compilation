@@ -45,3 +45,16 @@ gamma1_post = posterior_samples$b
 stan_samples = data.frame(beta0_post, beta1_post, gamma0_post, gamma1_post, row.names=NULL)
 
 write.table(stan_samples, './samples.txt', row.names=FALSE, col.names=FALSE, fileEncoding = 'UTF-8')
+
+
+# Save chain samples to visualize convergence
+
+beta0_post = c(extract(stan_fit, pars = 'b_hu_Intercept', permuted = FALSE, inc_warmup=TRUE))
+beta1_post = c(extract(stan_fit, pars = 'b_hu', permuted = FALSE, inc_warmup=TRUE))
+gamma0_post = c(extract(stan_fit, pars = 'b_Intercept', permuted = FALSE, inc_warmup=TRUE))
+gamma1_post = c(extract(stan_fit, pars = 'b', permuted = FALSE, inc_warmup=TRUE))
+
+stan_samples = data.frame(beta0_post, beta1_post, gamma0_post, gamma1_post, row.names=NULL)
+
+write.table(stan_samples, './stan_samples_full.txt', row.names=FALSE, col.names=FALSE, fileEncoding = 'UTF-8')
+
