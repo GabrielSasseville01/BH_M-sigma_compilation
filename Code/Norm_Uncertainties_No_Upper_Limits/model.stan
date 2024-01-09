@@ -73,7 +73,9 @@ model {
     target += bernoulli_logit_lpmf(Z | hu);
 
     for (n in 1:N) {
+      if (Y[n] != 0) {
       target += normal_lpdf(Y[n] | mu[n], Y_err[n]);
+      }
     }
   }
   // priors including constants
