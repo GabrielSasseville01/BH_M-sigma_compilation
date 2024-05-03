@@ -24,7 +24,7 @@ avgErr = mean(data$DMBH[data$UPPERLIMIT == 0])
 stan_data = list(
   N = nrow(data),
   M = 10,
-  sigma_mu = 1.96,
+  sigma_mu = 1.89,
   sigma_std = 0.27,
   Y = exp(data$MBH),
   Y_err = data$DMBH,
@@ -69,7 +69,7 @@ write.table(stan_samples, './prior_samples_full.txt', row.names=FALSE, col.names
 stan_data = list(
   N = nrow(data),
   M = 10,
-  sigma_mu = 1.96,
+  sigma_mu = 1.89,
   sigma_std = 0.27,
   Y = exp(data$MBH),
   Y_err = data$DMBH,
@@ -137,6 +137,12 @@ hurdle_rep_100x = posterior_samples$hurdle_sim_100x
 write.table(x_rep_100x, './post_pred_check_x_100x.txt', row.names=FALSE, col.names=FALSE, fileEncoding='UTF-8')
 write.table(linear_rep_100x, './post_pred_check_lin_100x.txt', row.names=FALSE, col.names=FALSE, fileEncoding='UTF-8')
 write.table(hurdle_rep_100x, './post_pred_check_hur_100x.txt', row.names=FALSE, col.names=FALSE, fileEncoding='UTF-8')
+
+
+
+
+
+
 
 
 
