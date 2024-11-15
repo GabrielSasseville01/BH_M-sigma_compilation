@@ -11,13 +11,4 @@ The main code for this paper is at BH_M-sigma_compilation/Code/Mixture_Upper_Lim
 The figures generated for the paper can be found at BH_M-sigma_compilation/Figures
 
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+A novel approach to understanding the link between supermassive black holes and host galaxies © 2024 by Gabriel Sasseville is licensed under CC BY 4.0 
